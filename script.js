@@ -13,3 +13,5 @@ document.addEventListener('DOMContentLoaded', function() {
         musicPlayer.pause();
         musicPlayer.currentTime = 0;
       });
+      // Load a song into the music player.
+musicPlayer.src = 'song.mp3';
