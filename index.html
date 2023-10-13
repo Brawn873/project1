@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
-</head> 
+</head>
 <body>
 
     <h1>Music Player</h1>
@@ -16,9 +16,36 @@
         <div>
             <button id="play">Play</button>
             <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
             <button id="next">Next</button>
         </div>
     </div>
-    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.querySelector('#audio');
+            const playButton = document.querySelector('#play');
+            const pauseButton = document.querySelector('#pause');
+            const stopButton = document.querySelector('#stop');
+            const nextButton = document.querySelector('#next');
+
+            playButton.addEventListener('click', () => {
+                audio.play();
+            });
+
+            pauseButton.addEventListener('click', () => {
+                audio.pause();
+            });
+
+            stopButton.addEventListener('click', () => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+
+            nextButton.addEventListener('click', () => {
+                // TODO: Implement logic to play the next song.
+            });
+        });
+    </script>
 </body>
 </html>
