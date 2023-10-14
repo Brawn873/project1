@@ -17,3 +17,11 @@ body {
     padding: 10px;
     margin: 5px;
   }
+
+  #play, #next {
+    background-color: green;
+  }
+  
+  #pause, #stop {
+    background-color: red;
+  }
