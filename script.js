@@ -15,3 +15,24 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       // Load a song into the music player.
 musicPlayer.src = 'song.mp3';
+
+
+
+const songUrls = [
+    'song1.mp3',
+    'song2.mp3',
+    'song3.mp3',
+];
+
+let currentSongIndex = 0;
+
+nextButton.addEventListener('click', () => {
+    currentSongIndex++;
+
+    if (currentSongIndex >= songUrls.length) {
+        currentSongIndex = 0;
+    }
+
+    audio.src = songUrls[currentSongIndex];
+    audio.play();
+});
